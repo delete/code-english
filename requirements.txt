@@ -1,3 +1,2 @@
-Django==1.9.2
-django-countries==3.4.1
-wheel==0.26.0
+Django
+django-webpack-loader
