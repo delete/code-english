@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block body %}
+  
+  <dashboard
+      :user-full-name="'{{ user.full_name }}'"
+      :interests="{{ interests }}"
+      :teaching-to="{{ teaching_to }}"
+      :learning-from="{{ learning_from }}"></dashboard>
+  
+{% endblock body %}

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load json_filter %}
+
+{% block title %}Login{% endblock title %}
+
+{% block body %}
+  <update-profile :user-id="{{ user.id }}"></update-profile>
+
+<!--
+<div class="row">
+  <div class="col-md-12">
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"><img class="img-responsive" src=
+          "http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png">
+          </div>
+          <div class="col-md-9">
+            <h1>{{ user.full_name }}</h1>
+
+            <div class="col-md-12">
+              <p><span style="line-height: 28.5714px;">Email:
+              {{ user.email }}</span>
+              </p>
+               <p><span style="line-height: 28.5714px;">Country:
+              {{ user.country.name }}</span>
+              </p>
+              {% for interest in interests %}
+                {% if interest.iam == 'T' %}
+                  <p>I Can Teach:</p>
+                  <p> - {{ interest.subject }} - 
+                    {% if interest.level == 0 %}
+                      Basic
+                    {% elif interest.level == 1 %}
+                      Intermediate
+                    {% else %}
+                      Advanced
+                    {% endif %}
+                  </p> 
+                {% elif interest.iam == "S" %}
+                  <p>I Want to Learn:</p>
+                  <p> - {{ interest.subject }} - 
+                    {% if interest.level == 0 %}
+                      Basic
+                    {% elif interest.level == 1 %}
+                      Intermediate
+                    {% else %}
+                      Advanced
+                    {% endif %}
+                  </p> 
+                {% endif %}
+              {% endfor %}
+
+              <div class="form-inline">
+                <div class="form-group">
+                  <a href="" class="btn btn-primary form-control">Update Interests</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Update your profile</h1>
+
+        <form  method="POST" enctype="multipart/form-data" role="form">
+          {% csrf_token %}
+
+            {{ form.non_field_errors}}
+
+            {% for field in form %}
+              <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+                {{ field.errors }}
+              </div>
+            {% endfor %}
+
+            <div class="form-inline">
+              <button class="btn btn-primary form-control" 
+                type="submit">
+                <i class="fa fa-floppy-o"></i> 
+                Submit</button>
+              <div class="form-group">
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+{% endblock body %}
